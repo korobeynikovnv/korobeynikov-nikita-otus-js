@@ -7,12 +7,12 @@ var sum = function (value){
 
     let add = function(value){
 
-        if (!value){
+        if (!arguments.length){
             return totalCount;
         }
         
         if (typeof value !== 'number') {
-            throw `"${value}" - не является числом`;
+            throw new Error(`"${value}" - не является числом`);
         }
 
         totalCount  = totalCount + value;
@@ -20,11 +20,10 @@ var sum = function (value){
         return add;
     };
 
-
     let totalCount = 0;
-
-    add(value);
-
-    return add;
     
+    if (arguments.length)
+        return add(value);
+    
+    return add;
 }
