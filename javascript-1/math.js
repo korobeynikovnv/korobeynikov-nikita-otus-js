@@ -25,5 +25,5 @@ var sum = function (value){
     if (arguments.length)
         return add(value);
     
-    return add;
+    return add();
 }
