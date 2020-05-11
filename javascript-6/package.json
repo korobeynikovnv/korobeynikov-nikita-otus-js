@@ -1,0 +1,16 @@
+{
+  "name": "javascript-6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tree.js",
+  "type": "module",
+  "scripts": {
+    "tree": "node --experimental-modules tree.js --path=foo"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^13.13.5",
+    "minimist": "^1.2.5"
+  }
+}
