@@ -27,5 +27,5 @@ const DATA = [{
 
 /** @type {MyTree} */
 const TREE = document.querySelector('#root');
-TREE.items = DATA;
+TREE.Items = DATA;
 TREE.render();

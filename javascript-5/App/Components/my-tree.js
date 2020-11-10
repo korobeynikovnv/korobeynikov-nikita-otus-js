@@ -5,8 +5,8 @@ export class MyTree extends LitElement {
 
 	static get properties() {
 		return {
-		  id: {type: String},
-		  items : {type : Array}
+		  Id: {type: String},
+		  Items : {type : Array}
 		};
 	  }
 
@@ -14,17 +14,17 @@ export class MyTree extends LitElement {
 		super();
 		
 		/** @type {MyNode[]} */
-		this.items = [];
+		this.Items = [];
 		/** @type {String} */
-		this.id = 'Default';
+		this.Id = 'Default';
     }
 
     render(){
 		return html`
 		<div class="my-tree">
-            <div>${this.id}</div>
+            <div>${this.Id}</div>
             <ul class="root">
-                ${this.items.map(n => html`<my-leaf id="${n.id}" .items="${n.items}"></my-leaf>`)}
+                ${this.Items.map(n => html`<my-leaf id="${n.id}" .items="${n.items}"></my-leaf>`)}
             </ul>
         </div>`;
     }
