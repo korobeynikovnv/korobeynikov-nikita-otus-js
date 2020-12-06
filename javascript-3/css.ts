@@ -1,24 +1,24 @@
 /**
  * Получить уникальный css селектор для элемента
  * @param {HTMLElement} element 
- * @returns {String} 
+ * @returns {string} 
  */
-function getPath(element : HTMLElement): String{
+function getPath(element : HTMLElement): string{
 
     /**
      * 
-     * @param {Array<String>} cssSelector 
+     * @param {string[]} cssSelector 
      */
-    let isUnique = function(cssSelector : Array<String>) : Boolean{
+    let isUnique = function(cssSelector : string[]) : boolean{
         return document.querySelectorAll(cssSelector.join('')).length === 1;
     }
 
     /**
      * 
      * @param {HTMLElement} element 
-     * @returns {Array<String>} selectors
+     * @returns {string[]} selectors
      */
-    let selectorsGenerator = function* (element) : Generator<String>{
+    let selectorsGenerator = function* (element) : Generator<string>{
         
         if (element.id){
             yield `#${element.id}`;
@@ -26,7 +26,7 @@ function getPath(element : HTMLElement): String{
         
         //класс объекта
         for (let i = 0; i < element.classList.length; i++){
-            let value : String = element.classList[i];
+            let value : string = element.classList[i];
             yield `.${value}`;
         }
 
@@ -55,7 +55,7 @@ function getPath(element : HTMLElement): String{
         }
     }
 
-    let result : Array<String> = [];
+    let result : string[] = [];
 
     //Проверяем на уникальность селекторов сам элемент
     let elemGenerator = selectorsGenerator(element);    

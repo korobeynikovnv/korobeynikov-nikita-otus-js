@@ -4,9 +4,9 @@ import { MyNode } from '../Models/tree-node';
 
 export class MyLeaf extends LitElement {
 
-	private Id : String;
+	private Id : string;
 
-	private Items : Array<MyLeaf>;
+	private Items : MyLeaf[];
 
 	static get properties() {
 		return {

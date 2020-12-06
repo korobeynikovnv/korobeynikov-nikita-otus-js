@@ -7,13 +7,13 @@ const testHostname = '127.0.0.1';
 /**
  * Отправить тестовые запросы на сервер
  * @param {number} amount количество запросов
- * @param {Boolean} isAsync Являются ли запросы асинхронными
+ * @param {boolean} isAsync Являются ли запросы асинхронными
  */
-async function request (amount : Number, isAsync : Boolean = false) : Promise<Boolean>{
+async function request (amount : number, isAsync : boolean = false) : Promise<boolean>{
 
     let testPath = `http://${testHostname}:${testPort}`;
 
-    let promiseRequest = function (testPath : String, i : Number) : Promise<Boolean> {
+    let promiseRequest = function (testPath : string, i : number) : Promise<boolean> {
         return new Promise((resolve, reject) => {
             http.get(testPath, (res) => {
                 console.log(`Успешно обработан запрос ${i}`);

@@ -5,7 +5,7 @@ import { MyLeaf } from './Components/my-leaf';
 
 /**
  * Как будто мы получили их динамически
- * @type {Array<MyNode>}
+ * @type {MyNode[]}
  */
 const DATA = [{
     "id": 1,

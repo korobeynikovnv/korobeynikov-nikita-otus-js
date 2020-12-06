@@ -7,9 +7,9 @@ const defaultPort = 3000
  */
 export class Server {
 
-	private Port : Number;
+	private Port : number;
 
-	private HostName : String;
+	private HostName : string;
 
 	private Server : http.Server
 
@@ -18,7 +18,7 @@ export class Server {
      * @param {number} port 
      * @param {string} hostname 
      */
-    constructor(port : Number, hostname : String){
+    constructor(port : number, hostname : string){
         this.Port = port || defaultPort;
         this.HostName = hostname || defaultHostname;
         this.Server = http.createServer();
@@ -28,7 +28,7 @@ export class Server {
      * Запустить сервер
      * @returns Promise<true>
      */
-    start() : Promise<Boolean>{      
+    start() : Promise<boolean>{      
 
         return new Promise((resolve, reject) => {
             let timeOut = function(timeout){

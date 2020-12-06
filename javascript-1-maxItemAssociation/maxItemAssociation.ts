@@ -1,21 +1,21 @@
-let buys : Array<Array<String>> = [["a", "b"], ["a", "c"], ["d", "e"]];
+let buys : string[][] = [["a", "b"], ["a", "c"], ["d", "e"]];
 
 maxItemAssociation(buys);
 
 /**
  * Найти максимальную рекомендация среди всех покупок пользователя
- * @param {Array<Array<string>>} buys
- * @return {Array<string>}
+ * @param {string[][]} buys
+ * @return {string[]}
  */
-function maxItemAssociation(buys : Array<Array<String>>) : Array<String>{
+function maxItemAssociation(buys : string[][]) : string[]{
 
 	/**
 	 * Получить группу рекомендация для конкретного продукта
-	 * @param {String} compared продукта для поиска
-	 * @param {Array<Array<String>>} buys все покупки пользователя
-	 * @returns {Array<String>} все связанные продукты
+	 * @param {string} compared продукта для поиска
+	 * @param {string[][]} buys все покупки пользователя
+	 * @returns {string[]} все связанные продукты
 	 */
-	let getAssociation = function(compared : String, buys : Array<Array<String>>) : Array<String>{
+	let getAssociation = function(compared : string, buys : string[][]) : string[]{
 
 		let association = [];
 

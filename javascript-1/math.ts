@@ -1,7 +1,7 @@
 /**
  * Цикличное суммирование. Без параметров - накопленный результат
- * @param {Number|undefined} value Число для сложения
- * @returns {Number|function} Накопленный результат или продолжение цикла
+ * @param {number|undefined} value Число для сложения
+ * @returns {number|function} Накопленный результат или продолжение цикла
  */
 var sum = function (value : number | undefined) : number | Function{    
 
