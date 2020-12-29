@@ -9,13 +9,13 @@ const fullPath = resolve(args['path']);
 /**
  * viewModel для просмотра содержимого папки
  * @typedef {Object} Content
- * @property {String[]} files
- * @property {String[]} folders
+ * @property {string[]} files
+ * @property {string[]} folders
  */
 
 /**
  * Вывести в консоль содержимое папки рекурсивно
- * @param {String} path 
+ * @param {string} path 
  */
 async function getContent(path){
 	let content = await readFolder(path, path);
@@ -25,8 +25,8 @@ async function getContent(path){
 
 /**
  * Считать содержимое папки рекурсивно
- * @param {String} current 
- * @param {String} root
+ * @param {string} current 
+ * @param {string} root
  * @return {Promise<Content>}
  */
 async function readFolder(current, root){
